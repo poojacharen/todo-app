@@ -1,0 +1,32 @@
+Front-End:
+npx create-react-app client
+
+What I did:
+ Generated a ready-to-go React project in client/ that bundles Webpack, Babel, ESLint, Jest, etc.
+
+Why: 1. Saves hours of configuration.
+     2. Provides a hot-reload dev server (npm start → localhost:3000).
+     3. Standard conventions mean any React developer can jump in.
+
+Back-End:
+mkdir api && cd api
+npm init -y
+npm install express cors
+
+What I did:
+ Created a minimal Node.js project in api/, installed Express (web framework) and CORS middleware.
+
+Why: 1. Express is battle-tested and easy to stand up basic CRUD routes.
+     2. CORS lets the browser-hosted React app call the local API on a different port.
+
+Advantages of this approach: 1. Clear separation of front-end vs back-end code.
+                             2. Each can be run, tested, and debugged independently.
+                             3. No “magic”—HTTP is the only contract between them.
+
+Disadvantages: 1. Two separate runtimes to manage in dev.
+               2. You need to remember to run both servers.
+               3. CORS adds a minor configuration step.
+
+Things to keep in mind: 1. In production, you’ll unify them (e.g. Static Web App + Functions) or handle CORS securely.
+                        2. You’ll also replace the in-memory store with a proper database.
+
