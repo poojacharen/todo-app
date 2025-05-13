@@ -1,0 +1,17 @@
+Terminal 1: cd api && node index.js   → http://localhost:4000
+Terminal 2: cd client && npm start     → http://localhost:3000
+
+What I did: Ran two terminal sessions side by side. One hosts the Express API, the other hosts the React dev server.
+
+Why: 1. Allows hot-reload on front-end changes.
+     2. Allows quick edits and auto-restarts on back-end changes (we could add nodemon).
+
+Advantages: 1. Immediate feedback for each layer.
+            2. Errors are surfaced in the terminal consoles.
+
+Disadvantages: 1. Manual “spin up” in dev—easy to forget one of them.
+               2. Not how you’ll run in production.
+
+Things to keep in mind: 1. Add npm run dev or a root-level concurrently script to start both with one command.
+                        2. For production, containerize or deploy to cloud services that handle startup.
+
