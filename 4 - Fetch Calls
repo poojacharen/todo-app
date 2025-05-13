@@ -1,0 +1,18 @@
+client/src/App.js issues:
+GET /todos on mount
+POST /todos to add
+PUT /todos/:id to toggle
+DELETE /todos/:id to remove
+
+Why: 1. Demonstrates the classic CRUD flow over HTTP.
+     2. Let me confirm the data contract between front-end and back-end.
+
+Advantages: 1. Decoupled API—any client (mobile, another web app) could talk to it.
+            2. Easy to test with curl or Postman.
+
+Disadvantages: 1. No error handling or retry logic in our simple example.
+               2. In real apps, you’d type your responses (TypeScript) or validate inputs server-side.
+
+Things to keep in mind: 1. Add proper error messages and UI feedback.
+                        2. Implement authorization/authentication.
+                        3. Move to a typed interface (e.g. JSON schema or TypeScript).
