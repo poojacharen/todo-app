@@ -1,0 +1,22 @@
+Installed Tools (Top Row)
+Homebrew → Node.js & npm → VS Code
+
+What I did: 1. Installed Homebrew to manage macOS packages.
+            2. Used Homebrew to install the latest Long-Term-Support release of Node.js (which includes npm).
+            3. Opened the project in VS Code for editing, integrated terminals, linting, formatting, and extensions.
+
+Why: 1. Homebrew gives me a single, consistent way to install/update dev tools.
+     2. Node.js powers both our front-end build toolchain and back-end server.
+     3. npm manages all the JavaScript dependencies.
+     4. VS Code streamlines editing with IntelliSense, integrated terminals, and extensions (ESLint, Prettier, Azure tooling).
+
+Advantages: 1. Fast setup, version control via Homebrew.
+            2. Unified JavaScript toolchain.
+            3. Instant feedback loops in one editor.
+
+Disadvantages: 1. macOS-only for Homebrew (Linux/Windows have different installs).
+               2. Must keep Node versions in sync across teams (we’d add a .nvmrc or similar).
+
+Things to keep in mind:
+Pin Node.js to a specific LTS version.
+Commit editor config + package.json engines for consistency.
